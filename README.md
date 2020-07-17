@@ -35,7 +35,7 @@ In short this protocol consists of the following steps:
    For instance: `display_time_bar 0.5 500 "fs"` (each MD step is 0.5 fs and ticks on the time bar are 500 fs apart)
 
 Because it might be required to launch VMD several times and reading a long trajectory can take time, I prefer to create a new trajectory file with only the necessary snapshots.
-I use for instance a small fortran script for XYZ files (see [XYZ_stride.sh](XXX) and [XYZ_stride.f90](XXX)). 
+I use for instance a small fortran script for XYZ files (see [XYZ_stride.sh](https://github.com/bgrosjea/MD_movie_protocol/blob/master/XYZ_stride.sh) and [XYZ_stride.f90](https://github.com/bgrosjea/MD_movie_protocol/blob/master/XYZ_stride.f90)). 
 To use it download both files, place them in the same directory and run 
 `./XYZ_stride.sh trajectory_file first_snapshot stride last_snapshot`
 
@@ -55,7 +55,7 @@ If 'vmd' is not a recognized command, make sure the VMD executable or a link to 
 ln -s path/to/VMD/executable /directory/in/your/PATH/variable/vmd
 ```
 
-An example of such a VMD script can be found [here](XXX). It contains in particular the command to create the time bar, which **has to be modified to have the right times associated to your MD snapshots**. 
+An example of such a VMD script can be found [here (VMD_movie.tcl)](https://github.com/bgrosjea/MD_movie_protocol/blob/master/VMD_movie.tcl). It contains in particular the command to create the time bar, which **has to be modified to have the right times associated to your MD snapshots**. 
 
 ## VMD export options
 
@@ -94,7 +94,7 @@ Move all jpg to an empty directory.
 
 Please refer to the screenshot below to locate the different objects in the very dense Blender window. 
 
-1. Open the pre-configured file *blender_default_VMD_movie.blend*
+1. Open the pre-configured file *[blender_default_VMD_movie.blend](https://github.com/bgrosjea/MD_movie_protocol/blob/master/blender_default_VMD_movie.blend)*
 2. In the top toolbar, select *Video Editing*. 
 3. In the bottom panel select *Sequencer*,  then go click on *Add>Image/Sequence*.
 4. In the window that appears, go to the directory where you stored **only** the jpeg images, and press "A" to select all the files, then click on *Add Image Strip*.
